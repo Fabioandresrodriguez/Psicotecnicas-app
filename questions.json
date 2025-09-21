@@ -1,3 +1,32 @@
-{
-    "content": "[\n  {\n    \"q\": 20,\n    \"factor\": \"A\",\n    \"text\": \"20. Preferiría tener una casa:\",\n    \"options\": [\n      {\"key\":\"A\", \"text\":\"En un barrio con vida social\", \"score\": 2},\n      {\"key\":\"B\", \"text\":\"Término medio\", \"score\": 1},\n      {\"key\":\"C\", \"text\":\"Aislada en el bosque\", \"score\": 0}\n    ]\n  },\n  {\n    \"q\": 21,\n    \"factor\": \"A\",\n    \"text\": \"21. Con el mismo horario y sueldo, sería más interesante ser:\",\n    \"options\":[\n      {\"key\":\"A\",\"text\":\"Cocinero (0)\",\"score\":0},\n      {\"key\":\"B\",\"text\":\"No estoy seguro (1)\",\"score\":1},\n      {\"key\":\"C\",\"text\":\"El que sirve mesas (2)\",\"score\":2}\n    ]\n  }\n  /* ... el resto de preguntas ... */\n]\n"
-}
+[
+  {
+    "q": 1,
+    "factor": "A",
+    "text": "Prefiero trabajar en:",
+    "options": [
+      {"key": "A", "text": "Un grupo grande", "score": 2},
+      {"key": "B", "text": "Un grupo pequeño", "score": 1},
+      {"key": "C", "text": "Solo", "score": 0}
+    ]
+  },
+  {
+    "q": 2,
+    "factor": "B",
+    "text": "Cuando enfrento un problema difícil, suelo:",
+    "options": [
+      {"key": "A", "text": "Buscar ayuda rápidamente", "score": 1},
+      {"key": "B", "text": "Intentar resolverlo solo", "score": 2},
+      {"key": "C", "text": "Dejarlo para más tarde", "score": 0}
+    ]
+  },
+  {
+    "q": 3,
+    "factor": "C",
+    "text": "En reuniones sociales, tiendo a:",
+    "options": [
+      {"key": "A", "text": "Hablar mucho", "score": 2},
+      {"key": "B", "text": "Hablar lo necesario", "score": 1},
+      {"key": "C", "text": "Permanecer callado", "score": 0}
+    ]
+  }
+]

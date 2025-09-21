@@ -17,6 +17,7 @@ questions = load_questions()
 
 st.title("📘 Test Psicotécnico")
 st.write("Responde todas las preguntas. Al finalizar, haz clic en **Enviar** para ver tu reporte.")
+st.write("Preguntas cargadas:", questions[:2])  # muestra las 2 primeras preguntas
 
 # ==============================
 # 2. Formulario dinámico

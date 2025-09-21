@@ -18,15 +18,5 @@
       {"key": "B", "text": "Intentar resolverlo solo", "score": 2},
       {"key": "C", "text": "Dejarlo para más tarde", "score": 0}
     ]
-  },
-  {
-    "q": 3,
-    "factor": "C",
-    "text": "En reuniones sociales, tiendo a:",
-    "options": [
-      {"key": "A", "text": "Hablar mucho", "score": 2},
-      {"key": "B", "text": "Hablar lo necesario", "score": 1},
-      {"key": "C", "text": "Permanecer callado", "score": 0}
-    ]
   }
 ]

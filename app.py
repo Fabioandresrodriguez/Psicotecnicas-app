@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import pandas as pd
 
-st.set_page_config(page_title="Test Psicotécnico 16PF", layout="wide")
+st.set_page_config(page_title="Test Psicotécnico", layout="wide")
 
 # ==============================
 # 1. Cargar preguntas JSON
@@ -15,7 +15,7 @@ def load_questions(json_file="questions.json"):
 
 questions = load_questions()
 
-st.title("📘 Test Psicotécnico - 16PF")
+st.title("📘 Test Psicotécnico")
 st.write("Responde todas las preguntas. Al finalizar, haz clic en **Enviar** para ver tu reporte.")
 
 # ==============================

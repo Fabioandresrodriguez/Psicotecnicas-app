@@ -1,0 +1,23 @@
+[
+  {
+    "q": 20,
+    "factor": "A",
+    "text": "20. Preferiría tener una casa:",
+    "options": [
+      {"key":"A", "text":"En un barrio con vida social", "score": 2},
+      {"key":"B", "text":"Término medio", "score": 1},
+      {"key":"C", "text":"Aislada en el bosque", "score": 0}
+    ]
+  },
+  {
+    "q": 21,
+    "factor": "A",
+    "text": "21. Con el mismo horario y sueldo, sería más interesante ser:",
+    "options":[
+      {"key":"A","text":"Cocinero (0)","score":0},
+      {"key":"B","text":"No estoy seguro (1)","score":1},
+      {"key":"C","text":"El que sirve mesas (2)","score":2}
+    ]
+  }
+  /* ... el resto de preguntas ... */
+]

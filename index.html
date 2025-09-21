@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>16-PF — Cuestionario</title>
+<style>
+  body{font-family: Arial; max-width:900px;margin:20px auto;padding:10px;}
+  .question{margin:12px 0;padding:8px;border-bottom:1px solid #eee;}
+  .factor-box{background:#f6f8ff;padding:8px;margin-bottom:12px;border-radius:6px;}
+  .result{background:#eef;padding:12px;border-radius:6px;margin-top:14px;}
+</style>
+</head>
+<body>
+<h1>16-PF — Cuestionario (demo)</h1>
+<div id="app">
+  <div id="questions">Cargando preguntas...</div>
+  <button id="submitBtn">Calcular resultados</button>
+  <div id="output"></div>
+</div>
+
+<script>
+const QUESTIONS_URL = "https://raw.githubusercontent.com/usuario/repositorio/main/questions.json"; 
+// REEMPLAZA con tu URL raw de GitHub
+
+let questions = [];
+
+async function loadQuestions(){
+  const resp = await fetch(QUESTIONS_URL);
+  questions = await resp.json();
+  renderQuestions();
+}
+
+function renderQuestions(){
+  const container = document.getElementById('questions');
+  container.innerHTML = '';
+  // Agrupar por factor para mejor UX
+  const byFactor = {};
+  questions.forEach(q=>{ byFactor[q.factor] = byFactor[q.factor] || []; byFactor[q.factor].push(q); });
+  for (const factor of Object.keys(byFactor).sort()){
+    const block = document.createElement('div');
+    block.className = 'factor-box';
+    block.innerHTML = `<strong>Factor ${factor}</strong>`;
+    byFactor[factor].forEach(q=>{
+      const qdiv = document.createElement('div');
+      qdiv.className = 'question';
+      qdiv.innerHTML = `<div><strong>${q.q}.</strong> ${q.text}</div>`;
+      q.options.forEach(opt=>{
+        const id = `q${q.q}_${opt.key}`;
+        qdiv.innerHTML += `
+          <label style="display:block;margin:4px 0;">
+            <input type="radio" name="q${q.q}" value="${opt.score}" id="${id}">
+            ${opt.key}. ${opt.text}
+          </label>`;
+      });
+      block.appendChild(qdiv);
+    });
+    container.appendChild(block);
+  }
+}
+
+function computeScores(){
+  const answers = {};
+  let factorSums = {};
+  let factorCounts = {};
+  questions.forEach(q=>{
+    const radios = document.getElementsByName(`q${q.q}`);
+    let val = null;
+    for (let r of radios) if (r.checked) { val = Number(r.value); break; }
+    if (val === null) val = 0; // si no responde, contar como 0 (ajusta si quieres otra regla)
+    answers[q.q] = val;
+    factorSums[q.factor] = (factorSums[q.factor]||0) + val;
+    factorCounts[q.factor] = (factorCounts[q.factor]||0) + 1;
+  });
+
+  // Escalar raw → 1..10 (lineal): cada pregunta puntúa entre min 0 y max 2 -> factor raw min=0, max=2*count
+  const scaled = {};
+  for (const f in factorSums){
+    const raw = factorSums[f];
+    const min = 0;
+    const max = 2 * factorCounts[f];
+    const sten = Math.round(1 + 9 * (raw - min) / (max - min) ); // 1..10
+    scaled[f] = Math.min(10, Math.max(1, sten));
+  }
+
+  // Mostrar
+  const out = document.getElementById('output');
+  out.innerHTML = '<h3>Resultados</h3>';
+  out.innerHTML += '<table><tr><th>Factor</th><th>Raw</th><th>Sten (1-10)</th></tr>';
+  for (const f of Object.keys(scaled).sort()){
+    out.innerHTML += `<tr><td>${f}</td><td>${factorSums[f]}</td><td>${scaled[f]}</td></tr>`;
+  }
+  out.innerHTML += '</table>';
+  // Aquí puedes mapear scaled[f] a tu texto interpretativo (usa archivo interpretation.json o incrusta)
+}
+
+document.getElementById('submitBtn').addEventListener('click', computeScores);
+
+loadQuestions().catch(err=>{
+  document.getElementById('questions').innerText = 'Error cargando preguntas: ' + err;
+});
+</script>
+</body>
+</html>

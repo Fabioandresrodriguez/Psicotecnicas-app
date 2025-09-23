@@ -23,41 +23,41 @@
     "q": 3,
     "factor": "C",
     "text": "Suelo mantener la calma en situaciones de presión.",
-    "options": {
-      "A": {"text": "Siempre", "score": 2},
-      "B": {"text": "A veces", "score": 1},
-      "C": {"text": "Nunca", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "Siempre", "score": 2 },
+    { "key": "B", "text": "A veces", "score": 1 },
+    { "key": "C", "text": "Nunca", "score": 0 }
+  ]
   },
   {
     "q": 4,
     "factor": "E",
     "text": "Me gusta tomar la iniciativa en las decisiones.",
-    "options": {
-      "A": {"text": "Muy de acuerdo", "score": 2},
-      "B": {"text": "Algo de acuerdo", "score": 1},
-      "C": {"text": "En desacuerdo", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "Muy de acuerdo", "score": 2 },
+    { "key": "B", "text": "Algo de acuerdo", "score": 1 },
+    { "key": "C", "text": "En desacuerdo", "score": 0 }
+  ]
   },
   {
     "q": 5,
     "factor": "F",
     "text": "Soy una persona alegre y optimista.",
-    "options": {
-      "A": {"text": "Sí, casi siempre", "score": 2},
-      "B": {"text": "Depende del momento", "score": 1},
-      "C": {"text": "No, casi nunca", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "Si, casi siempre", "score": 2 },
+    { "key": "B", "text": "Depende del momento", "score": 1 },
+    { "key": "C", "text": "No, casi nunca", "score": 0 }
+  ]
   },
   {
     "q": 6,
     "factor": "G",
     "text": "Respeto las normas y reglas establecidas.",
-    "options": {
-      "A": {"text": "Siempre", "score": 2},
-      "B": {"text": "A veces", "score": 1},
-      "C": {"text": "Nunca", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "Siempre", "score": 2 },
+    { "key": "B", "text": "A veces", "score": 1 },
+    { "key": "C", "text": "Nunca", "score": 0 }
+  ]
   },
   {
     "q": 7,

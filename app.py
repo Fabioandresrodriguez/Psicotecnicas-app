@@ -7,7 +7,8 @@ with open("questions.json", "r", encoding="utf-8") as f:
 
 st.title("📋 Test Psicotécnico")
 
-respuestas = {}  # aquí guardaremos las respuestas
+# Diccionario para guardar respuestas
+respuestas = {}
 
 # Crear formulario
 with st.form("test_form"):
@@ -19,7 +20,7 @@ with st.form("test_form"):
             options=list(opts.keys()),
             format_func=lambda x: opts[x],
             key=f"pregunta_{q['q']}",
-            index=None  # 👈 Esto evita que aparezca preseleccionada
+            index=None  # 👈 No preselecciona ninguna opción
         )
         respuestas[q["q"]] = choice
 

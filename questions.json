@@ -3,11 +3,11 @@
     "q": 1,
     "factor": "A",
     "text": "Prefiero trabajar en grupo que solo.",
-    "options": {
-      "A": {"text": "Siempre", "score": 2},
-      "B": {"text": "A veces", "score": 1},
-      "C": {"text": "Nunca", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "De acuerdo", "score": 2 },
+    { "key": "B", "text": "Indiferente", "score": 1 },
+    { "key": "C", "text": "En desacuerdo", "score": 0 }
+  ]
   },
   {
     "q": 2,

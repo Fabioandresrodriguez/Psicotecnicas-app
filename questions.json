@@ -10,14 +10,14 @@
   ]
   },
   {
-    "q": 2,
+    "id": 2,
     "factor": "B",
     "text": "Me resulta fácil comprender ideas nuevas.",
-    "options": {
-      "A": {"text": "Muy fácil", "score": 2},
-      "B": {"text": "Regular", "score": 1},
-      "C": {"text": "Difícil", "score": 0}
-    }
+    "options": [
+    { "key": "A", "text": "Muy fácil", "score": 2 },
+    { "key": "B", "text": "Regular", "score": 1 },
+    { "key": "C", "text": "Dificil", "score": 0 }
+  ]
   },
   {
     "q": 3,

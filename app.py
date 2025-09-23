@@ -12,7 +12,7 @@ with st.form("test_form"):
     respuestas = {}
     
     for q in questions:
-        st.markdown(f"**Pregunta {q['id']}: {q['text']}**")
+        st.markdown(f"**Pregunta {q['q']}: {q['text']}**")
         # Construir opciones
         opts = {opt["key"]: opt["text"] for opt in q["options"]}
         # Guardar selección

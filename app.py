@@ -1,74 +1,34 @@
 import streamlit as st
 import json
-import pandas as pd
 
-st.set_page_config(page_title="Test Psicotécnico", layout="wide")
+# Cargar preguntas desde JSON
+with open("questions.json", "r", encoding="utf-8") as f:
+    questions = json.load(f)
 
-# ==============================
-# 1. Cargar preguntas JSON
-# ==============================
-@st.cache_data
-def load_questions(json_file="questions.json"):
-    with open(json_file, "r", encoding="utf-8") as f:
-        questions = json.load(f)
-    return questions
+st.title("📋 Test Psicotécnico")
 
-questions = load_questions()
-
-st.title("📘 Test Psicotécnico")
-st.write("Responde todas las preguntas. Al finalizar, haz clic en **Enviar** para ver tu reporte.")
-st.write("Preguntas cargadas:", questions[:2])  # muestra las 2 primeras preguntas
-
-# ==============================
-# 2. Formulario dinámico
-# ==============================
-responses = {}
+# Crear formulario
 with st.form("test_form"):
+    respuestas = {}
+    
     for q in questions:
-        st.markdown(f"**Pregunta {q['q']}: {q['text']}**")
+        st.markdown(f"**Pregunta {q['id']}: {q['text']}**")
+        # Construir opciones
         opts = {opt["key"]: opt["text"] for opt in q["options"]}
-        choice = st.radio(
-            label=f"Seleccione una opción para la pregunta {q['q']}",
+        # Guardar selección
+        respuestas[q["id"]] = st.radio(
+            "Selecciona una opción:",
             options=list(opts.keys()),
             format_func=lambda x: opts[x],
-            key=f"q{q['q']}"
+            key=f"pregunta_{q['id']}"
         )
-        responses[q["q"]] = choice
+        st.write("---")
+    
+    # Botón para enviar
+    submitted = st.form_submit_button("Enviar respuestas")
 
-    submitted = st.form_submit_button("Enviar")
-
-# ==============================
-# 3. Reporte final
-# ==============================
+# Mostrar resultados al enviar
 if submitted:
-    results = []
-    total_score = 0
+    st.success("✅ Respuestas enviadas correctamente.")
+    st.json(respuestas)
 
-    for q in questions:
-        chosen_key = responses[q["q"]]
-        chosen_opt = next(opt for opt in q["options"] if opt["key"] == chosen_key)
-        results.append({
-            "Pregunta": q["q"],
-            "Factor": q.get("factor", ""),
-            "Texto": q["text"],
-            "Respuesta": chosen_opt["text"],
-            "Puntaje": chosen_opt["score"]
-        })
-        total_score += chosen_opt["score"]
-
-    df = pd.DataFrame(results)
-
-    st.success("✅ ¡Test completado!")
-    st.write("### 📊 Resultados")
-    st.dataframe(df, use_container_width=True)
-
-    st.metric("Puntaje Total", total_score)
-
-    # Descargar reporte
-    csv = df.to_csv(index=False).encode("utf-8")
-    st.download_button(
-        label="⬇️ Descargar reporte en CSV",
-        data=csv,
-        file_name="reporte_16pf.csv",
-        mime="text/csv"
-    )

@@ -2,21 +2,302 @@
   {
     "q": 1,
     "factor": "A",
-    "text": "Prefiero trabajar en:",
-    "options": [
-      {"key": "A", "text": "Un grupo grande", "score": 2},
-      {"key": "B", "text": "Un grupo pequeño", "score": 1},
-      {"key": "C", "text": "Solo", "score": 0}
-    ]
+    "text": "Prefiero trabajar en grupo que solo.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
   },
   {
     "q": 2,
     "factor": "B",
-    "text": "Cuando enfrento un problema difícil, suelo:",
-    "options": [
-      {"key": "A", "text": "Buscar ayuda rápidamente", "score": 1},
-      {"key": "B", "text": "Intentar resolverlo solo", "score": 2},
-      {"key": "C", "text": "Dejarlo para más tarde", "score": 0}
-    ]
+    "text": "Me resulta fácil comprender ideas nuevas.",
+    "options": {
+      "A": {"text": "Muy fácil", "score": 2},
+      "B": {"text": "Regular", "score": 1},
+      "C": {"text": "Difícil", "score": 0}
+    }
+  },
+  {
+    "q": 3,
+    "factor": "C",
+    "text": "Suelo mantener la calma en situaciones de presión.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 4,
+    "factor": "E",
+    "text": "Me gusta tomar la iniciativa en las decisiones.",
+    "options": {
+      "A": {"text": "Muy de acuerdo", "score": 2},
+      "B": {"text": "Algo de acuerdo", "score": 1},
+      "C": {"text": "En desacuerdo", "score": 0}
+    }
+  },
+  {
+    "q": 5,
+    "factor": "F",
+    "text": "Soy una persona alegre y optimista.",
+    "options": {
+      "A": {"text": "Sí, casi siempre", "score": 2},
+      "B": {"text": "Depende del momento", "score": 1},
+      "C": {"text": "No, casi nunca", "score": 0}
+    }
+  },
+  {
+    "q": 6,
+    "factor": "G",
+    "text": "Respeto las normas y reglas establecidas.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 7,
+    "factor": "H",
+    "text": "Me siento cómodo conociendo gente nueva.",
+    "options": {
+      "A": {"text": "Muy cómodo", "score": 2},
+      "B": {"text": "Algo incómodo", "score": 1},
+      "C": {"text": "Muy incómodo", "score": 0}
+    }
+  },
+  {
+    "q": 8,
+    "factor": "I",
+    "text": "Soy sensible a las emociones de los demás.",
+    "options": {
+      "A": {"text": "Muy sensible", "score": 2},
+      "B": {"text": "Algo sensible", "score": 1},
+      "C": {"text": "Nada sensible", "score": 0}
+    }
+  },
+  {
+    "q": 9,
+    "factor": "L",
+    "text": "Sospecho con facilidad de las intenciones de la gente.",
+    "options": {
+      "A": {"text": "Sí, frecuentemente", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Rara vez", "score": 0}
+    }
+  },
+  {
+    "q": 10,
+    "factor": "M",
+    "text": "Suelo perderme en mis pensamientos e ideas.",
+    "options": {
+      "A": {"text": "Muy a menudo", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 11,
+    "factor": "N",
+    "text": "Me expreso con elegancia y estilo.",
+    "options": {
+      "A": {"text": "Sí, siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "No, nunca", "score": 0}
+    }
+  },
+  {
+    "q": 12,
+    "factor": "O",
+    "text": "Suelo preocuparme por cosas pequeñas.",
+    "options": {
+      "A": {"text": "Con frecuencia", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Rara vez", "score": 0}
+    }
+  },
+  {
+    "q": 13,
+    "factor": "Q1",
+    "text": "Me gusta cuestionar lo establecido y explorar ideas nuevas.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 14,
+    "factor": "Q2",
+    "text": "Prefiero trabajar solo que en grupo.",
+    "options": {
+      "A": {"text": "Muy de acuerdo", "score": 2},
+      "B": {"text": "Algo de acuerdo", "score": 1},
+      "C": {"text": "En desacuerdo", "score": 0}
+    }
+  },
+  {
+    "q": 15,
+    "factor": "Q3",
+    "text": "Soy una persona organizada y ordenada.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 16,
+    "factor": "Q4",
+    "text": "Me altero con facilidad en situaciones estresantes.",
+    "options": {
+      "A": {"text": "Muy fácilmente", "score": 2},
+      "B": {"text": "Depende", "score": 1},
+      "C": {"text": "No fácilmente", "score": 0}
+    }
+  },
+  {
+    "q": 17,
+    "factor": "A",
+    "text": "Me considero una persona amigable y cálida.",
+    "options": {
+      "A": {"text": "Sí, totalmente", "score": 2},
+      "B": {"text": "En parte", "score": 1},
+      "C": {"text": "No", "score": 0}
+    }
+  },
+  {
+    "q": 18,
+    "factor": "B",
+    "text": "Entiendo rápidamente conceptos abstractos.",
+    "options": {
+      "A": {"text": "Muy rápido", "score": 2},
+      "B": {"text": "Regular", "score": 1},
+      "C": {"text": "Me cuesta", "score": 0}
+    }
+  },
+  {
+    "q": 19,
+    "factor": "C",
+    "text": "Soy emocionalmente estable.",
+    "options": {
+      "A": {"text": "Sí, siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "No", "score": 0}
+    }
+  },
+  {
+    "q": 20,
+    "factor": "E",
+    "text": "Me gusta liderar en actividades grupales.",
+    "options": {
+      "A": {"text": "Sí, mucho", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "No, prefiero seguir", "score": 0}
+    }
+  },
+  {
+    "q": 21,
+    "factor": "F",
+    "text": "Soy entusiasta al enfrentar nuevos retos.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "Depende", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 22,
+    "factor": "G",
+    "text": "Cumplo con mis responsabilidades aunque no me gusten.",
+    "options": {
+      "A": {"text": "Sí, siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "No", "score": 0}
+    }
+  },
+  {
+    "q": 23,
+    "factor": "H",
+    "text": "Disfruto participar en eventos sociales.",
+    "options": {
+      "A": {"text": "Sí, mucho", "score": 2},
+      "B": {"text": "Un poco", "score": 1},
+      "C": {"text": "Nada", "score": 0}
+    }
+  },
+  {
+    "q": 24,
+    "factor": "I",
+    "text": "Me considero una persona compasiva.",
+    "options": {
+      "A": {"text": "Muy compasiva", "score": 2},
+      "B": {"text": "Algo compasiva", "score": 1},
+      "C": {"text": "Poco compasiva", "score": 0}
+    }
+  },
+  {
+    "q": 25,
+    "factor": "L",
+    "text": "Desconfío de la gente con facilidad.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 26,
+    "factor": "M",
+    "text": "Sueño despierto con frecuencia.",
+    "options": {
+      "A": {"text": "Sí, mucho", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 27,
+    "factor": "N",
+    "text": "Cuido mi forma de hablar y expresarme.",
+    "options": {
+      "A": {"text": "Sí, siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "No", "score": 0}
+    }
+  },
+  {
+    "q": 28,
+    "factor": "O",
+    "text": "Me preocupo por lo que pueda salir mal.",
+    "options": {
+      "A": {"text": "Muy seguido", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Rara vez", "score": 0}
+    }
+  },
+  {
+    "q": 29,
+    "factor": "Q1",
+    "text": "Me gusta explorar cosas diferentes a lo común.",
+    "options": {
+      "A": {"text": "Siempre", "score": 2},
+      "B": {"text": "A veces", "score": 1},
+      "C": {"text": "Nunca", "score": 0}
+    }
+  },
+  {
+    "q": 30,
+    "factor": "Q2",
+    "text": "Prefiero decidir sin consultar a otros.",
+    "options": {
+      "A": {"text": "Muy de acuerdo", "score": 2},
+      "B": {"text": "Algo de acuerdo", "score": 1},
+      "C": {"text": "En desacuerdo", "score": 0}
+    }
   }
 ]
+

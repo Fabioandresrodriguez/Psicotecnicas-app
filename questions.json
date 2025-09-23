@@ -20,7 +20,7 @@
   ]
   },
   {
-    "q": 3,
+    "id": 3,
     "factor": "C",
     "text": "Suelo mantener la calma en situaciones de presión.",
     "options": [
@@ -30,7 +30,7 @@
   ]
   },
   {
-    "q": 4,
+    "id": 4,
     "factor": "E",
     "text": "Me gusta tomar la iniciativa en las decisiones.",
     "options": [
@@ -40,7 +40,7 @@
   ]
   },
   {
-    "q": 5,
+    "id": 5,
     "factor": "F",
     "text": "Soy una persona alegre y optimista.",
     "options": [
@@ -50,7 +50,7 @@
   ]
   },
   {
-    "q": 6,
+    "id": 6,
     "factor": "G",
     "text": "Respeto las normas y reglas establecidas.",
     "options": [
